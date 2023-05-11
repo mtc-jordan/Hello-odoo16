@@ -4,14 +4,14 @@ services:
     image: postgres:15
     user: root
     environment:
-      - POSTGRES_USER=odoo
-      - POSTGRES_PASSWORD=odoo16@2022      
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=codesk995599      
       - POSTGRES_DB=postgres
     restart: always             # run as a service
     volumes:
         - ./postgresql:/var/lib/postgresql/data
 
-  odoo15:
+  odoo16:
     image: odoo:16
     user: root
     depends_on:
@@ -23,8 +23,8 @@ services:
     command: --
     environment:
       - HOST=db
-      - USER=odoo
-      - PASSWORD=odoo16@2022
+      - USER=admin
+      - PASSWORD=995599
     volumes:
       #- /etc/timezone:/etc/timezone:trt
       #- /etc/localtime:/etc/localtime:trt
